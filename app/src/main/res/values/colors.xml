@@ -52,4 +52,8 @@
     <color name="text_title_color">#111111</color>
     <color name="text_desc_color">#6a6a6a</color>
     <color name="text_secondary_color">#9d9d9d</color>
+
+
+    <color name="count_text_color_light">#9d9d9d</color>
+    <color name="blog_title_text_color_light">#111111</color>
 </resources>

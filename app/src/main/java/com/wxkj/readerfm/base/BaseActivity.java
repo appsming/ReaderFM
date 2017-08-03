@@ -178,11 +178,11 @@ public abstract class BaseActivity extends AppCompatActivity implements DialogCo
      *
      * @param throwable throwable
      */
-    protected void requestFailureHint(Throwable throwable) {
-        if (throwable != null) {
-            throwable.printStackTrace();
+    protected void requestFailureHint(int errorNo) {
+        if (errorNo != 200) {
+            AppContext.showToast(R.string.request_error_hint);
         }
-        AppContext.showToast(R.string.request_error_hint);
+
     }
 
 

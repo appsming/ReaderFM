@@ -10,7 +10,6 @@ import com.bumptech.glide.RequestManager;
 import com.wxkj.readerfm.AppConfig;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -151,6 +150,6 @@ public abstract class BaseListAdapter<T> extends BaseAdapter implements ViewHold
 
         Context getContext();
 
-        Date getSystemTime();
+      //  Date getSystemTime();
     }
 }

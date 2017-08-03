@@ -18,7 +18,7 @@ public class AppConfig {
 
     public static final boolean DEVELOPER_MODE = false;
 
-    public static final int PAGE_SIZE = 15;
+    public static final int PAGE_SIZE = 20;
 
     private final static String APP_CONFIG = "config";
     public static final String KEY_DOUBLE_CLICK_EXIT = "KEY_DOUBLE_CLICK_EXIT";

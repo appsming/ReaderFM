@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="news_viewpage_arrays">
-        <item>头条</item>
-        <item>科技</item>
-        <item>经济</item>
-        <item>生物</item>
-        <item>文学</item>
-        <item>军事</item>
-        <item>历史</item>
+        <item>悦读</item>
+        <item>情感</item>
+        <item>连播</item>
+        <item>校园</item>
+        <item>音乐</item>
+        <item>Labs</item>
+
     </string-array>
 
     <string-array name="collection_viewpage_arrays">

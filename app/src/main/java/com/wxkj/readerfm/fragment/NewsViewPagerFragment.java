@@ -16,13 +16,12 @@ import com.wxkj.readerfm.interf.OnTabReselectListener;
 public class NewsViewPagerFragment extends BaseViewPagerFragment implements OnTabReselectListener {
 
     public static final String BUNDLE_KEY_REQUEST_CATALOG = "BUNDLE_KEY_REQUEST_CATALOG";
-    public static final String CATALOG_TJ = "07";
-    public static final String CATALOG_KJ = "01";
-    public static final String CATALOG_JJ = "02";
-    public static final String CATALOG_SW = "03";
-    public static final String CATALOG_WX = "04";
-    public static final String CATALOG_JS = "05";
-    public static final String CATALOG_LS = "06";
+    public static final String CATALOG_YD = "1";
+    public static final String CATALOG_QG = "2";
+    public static final String CATALOG_LB = "3";
+    public static final String CATALOG_XY = "4";
+    public static final String CATALOG_YL = "5";
+    public static final String CATALOG_LBS = "6";
 
 
     /**
@@ -49,10 +48,7 @@ public class NewsViewPagerFragment extends BaseViewPagerFragment implements OnTa
         }
     }
 
-//    @Override
-//    protected int getTitleRes() {
-//        return R.string.app_name;
-//    }
+
 
     @Override
     protected PagerInfo[] getPagers() {
@@ -60,42 +56,20 @@ public class NewsViewPagerFragment extends BaseViewPagerFragment implements OnTa
         String[] titles = getResources().getStringArray(R.array.news_viewpage_arrays);
         PagerInfo[] infoList = new PagerInfo[titles.length];
         infoList[0] = new PagerInfo(titles[0], NewsFragment.class,
-                getBundle(CATALOG_TJ));
+                getBundle(CATALOG_YD));
         infoList[1] = new PagerInfo(titles[1], NewsFragment.class,
-                getBundle(CATALOG_KJ));
+                getBundle(CATALOG_QG));
         infoList[2] = new PagerInfo(titles[2], NewsFragment.class,
-                getBundle(CATALOG_JJ));
+                getBundle(CATALOG_LB));
 
         infoList[3] = new PagerInfo(titles[3], NewsFragment.class,
-                getBundle(CATALOG_SW));
+                getBundle(CATALOG_XY));
 
         infoList[4] = new PagerInfo(titles[4], NewsFragment.class,
-                getBundle(CATALOG_WX));
+                getBundle(CATALOG_YL));
 
         infoList[5] = new PagerInfo(titles[5], NewsFragment.class,
-                getBundle(CATALOG_JS));
-
-        infoList[6] = new PagerInfo(titles[6], NewsFragment.class,
-                getBundle(CATALOG_LS));
-
+                getBundle(CATALOG_LBS));
         return infoList;
     }
-
-//
-//    @Override
-//    protected int getIconRes() {
-//        return R.mipmap.btn_search_normal;
-//    }
-//
-//
-//    @Override
-//    protected View.OnClickListener getIconClickListener() {
-//        return new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        };
-//    }
-
 }

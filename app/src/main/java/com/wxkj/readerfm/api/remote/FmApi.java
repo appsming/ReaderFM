@@ -2,7 +2,6 @@ package com.wxkj.readerfm.api.remote;
 
 import android.util.Log;
 
-import com.alibaba.fastjson.JSON;
 import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.wxkj.readerfm.api.AsyncHttpHelp;
@@ -34,17 +33,17 @@ public class FmApi {
      * (1) 新闻列表
      * @param pageNo  页码
      * @param pageSize  页面大小 （默认15条或20条）
+     * @category 分类ID
      * @param requestListener
      */
-    public static  void requestNewsList(int pageNo,int pageSize,HttpCallback requestListener){
+    public static  void requestNewsList(int pageNo,int pageSize,String category,HttpCallback requestListener){
 
         HttpParams   httpParams = new HttpParams();
 
         httpParams.put("pageNo",pageNo);
-
         httpParams.put("pageSize",pageSize);
+        httpParams.put("category",category);
         String requestUrl = getBaseurl(UrlAddr.API_NEWS_LIST);
-        Log.i("TAG","===requestUrl======"+requestUrl+"======httpParams========="+ JSON.toJSONString(httpParams));
         AsyncHttpHelp.post(requestUrl,httpParams,requestListener);
     }
 
@@ -61,7 +60,7 @@ public class FmApi {
         httpParams.put("_id",newsId);
 
         String requestUrl = getBaseurl(UrlAddr.API_NEWS_DETAIL);
-        Log.i("TAG","===requestUrl======"+requestUrl+"======httpParams========="+ JSON.toJSONString(httpParams));
+
         AsyncHttpHelp.post(requestUrl,httpParams,requestListener);
     }
 

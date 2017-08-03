@@ -62,7 +62,7 @@ public class GuideActivity  extends BaseActivity implements View.OnClickListener
             public void onClick(View v) {
 
                 Intent intent = new Intent(GuideActivity.this,
-                        LoginActivity.class);
+                        MainActivity.class);
                 startActivity(intent);
                 AppContext.setFirstStart(false);
                 finish();
