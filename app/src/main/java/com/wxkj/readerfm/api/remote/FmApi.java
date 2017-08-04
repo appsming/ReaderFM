@@ -78,12 +78,9 @@ public class FmApi {
         httpParams.put("uname",username);
         httpParams.put("upass",password);
         String requestUrl = getBaseurl(UrlAddr.API_USER_LOGIN);
-
         AsyncHttpHelp.post(requestUrl,httpParams,handler);
 
     }
-
-
     /**
      * 用户注册
      * @param username
@@ -91,19 +88,26 @@ public class FmApi {
      * @param handler
      */
     public static  void register(String username,String password, HttpCallback handler){
-
-
         HttpParams   httpParams = new HttpParams();
-
         httpParams.put("uname",username);
         httpParams.put("upass",password);
         String requestUrl = getBaseurl(UrlAddr.API_USER_LOGIN);
-
         AsyncHttpHelp.post(requestUrl,httpParams,handler);
-
-
     }
 
+    /**
+     * 搜索内容
+     * @param searchKey
+
+     * @param handler
+     */
+    public static  void searchNewsList(String searchKey, HttpCallback handler){
+
+        HttpParams   httpParams = new HttpParams();
+        httpParams.put("searchkey",searchKey);
+        String requestUrl = getBaseurl(UrlAddr.API_NEWS_SEARCH);
+        AsyncHttpHelp.post(requestUrl,httpParams,handler);
+    }
 
 
 }
