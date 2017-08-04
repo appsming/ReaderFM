@@ -64,4 +64,46 @@ public class FmApi {
         AsyncHttpHelp.post(requestUrl,httpParams,requestListener);
     }
 
+
+    /**
+     * 用户登录
+     * @param username
+     * @param password
+     * @param handler
+     */
+    public static void login(String username,String password, HttpCallback handler){
+
+        HttpParams   httpParams = new HttpParams();
+
+        httpParams.put("uname",username);
+        httpParams.put("upass",password);
+        String requestUrl = getBaseurl(UrlAddr.API_USER_LOGIN);
+
+        AsyncHttpHelp.post(requestUrl,httpParams,handler);
+
+    }
+
+
+    /**
+     * 用户注册
+     * @param username
+     * @param password
+     * @param handler
+     */
+    public static  void register(String username,String password, HttpCallback handler){
+
+
+        HttpParams   httpParams = new HttpParams();
+
+        httpParams.put("uname",username);
+        httpParams.put("upass",password);
+        String requestUrl = getBaseurl(UrlAddr.API_USER_LOGIN);
+
+        AsyncHttpHelp.post(requestUrl,httpParams,handler);
+
+
+    }
+
+
+
 }

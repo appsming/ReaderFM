@@ -8,6 +8,7 @@ import com.kymjs.rxvolley.RxVolley;
 import com.kymjs.rxvolley.http.RequestQueue;
 import com.squareup.okhttp.OkHttpClient;
 import com.wxkj.readerfm.base.BaseApplication;
+import com.wxkj.readerfm.beans.UserInfo;
 
 import java.io.File;
 import java.util.Properties;
@@ -98,5 +99,23 @@ public class AppContext extends BaseApplication {
         set(KEY_FRITST_START, frist);
     }
 
+
+    private UserInfo  userInfo;
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(UserInfo userInfo) {
+        this.userInfo = userInfo;
+    }
+
+//    private UserInfo  getLoginUser(){
+//
+//
+//        return  new UserInfo();
+//
+//    }
+//
 
 }

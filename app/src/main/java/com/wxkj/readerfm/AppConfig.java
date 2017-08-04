@@ -25,6 +25,9 @@ public class AppConfig {
     public static final String KEY_FRITST_START = "KEY_FRIST_START";
     public static final String KEY_CHECK_UPDATE = "KEY_CHECK_UPDATE";
 
+    public static final int REQUEST_REGISTER_CODE = 0;
+
+
     // 默认存放文件下载的路径
     public final static String DEFAULT_SAVE_FILE_PATH = Environment
             .getExternalStorageDirectory()

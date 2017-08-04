@@ -17,4 +17,11 @@
 
     <string name="slider_my_update">检查更新</string>
     <string name="slider_my_about">关于我们</string>
+
+
+    <!--用户登录/注册-->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <!--搜索-->
+    <string name="search_news_hit">请输入关键字</string>
 </resources>

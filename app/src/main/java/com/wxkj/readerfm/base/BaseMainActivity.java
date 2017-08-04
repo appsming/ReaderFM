@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -17,7 +18,11 @@ import android.widget.TextView;
 import com.wxkj.readerfm.AppConfig;
 import com.wxkj.readerfm.AppContext;
 import com.wxkj.readerfm.R;
+import com.wxkj.readerfm.beans.UserInfo;
+import com.wxkj.readerfm.ui.SearchActivity;
+import com.wxkj.readerfm.ui.UserInfoActivity;
 import com.wxkj.readerfm.utils.DoubleClickExitHelper;
+import com.wxkj.readerfm.utils.UIHelper;
 
 import butterknife.Bind;
 
@@ -32,6 +37,8 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
     private ImageView mHeaderIcon;
 
     private TextView mHeaderName;
+
+    private UserInfo userInfo = null;
 
 
 
@@ -60,7 +67,7 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
                 this, drawer,  toolbar, R.string.drawer_open, R.string.drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+        userInfo = AppContext.getInstance().getUserInfo();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View heanderView = navigationView.getHeaderView(0);
@@ -69,6 +76,25 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
         heanderView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                if (null != userInfo) {
+
+                    if (!userInfo.isLogin()) {
+
+                        UIHelper.showLoginActivity(BaseMainActivity.this);
+                    } else {
+
+                        UserInfoActivity.show(BaseMainActivity.this,userInfo);
+
+                    }
+
+
+                } else {
+                    UIHelper.showLoginActivity(BaseMainActivity.this);
+
+                }
+
 
             }
         });
@@ -153,6 +179,35 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+
+    
+    
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_search, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        
+        switch (id){
+                
+            case  R.id.main_actionbar_menu_search:
+                SearchActivity.show(BaseMainActivity.this);
+                break;
+           
+        }
+        
+        
+        return super.onOptionsItemSelected(item);
+    }
 
 
 }
