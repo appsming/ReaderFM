@@ -1,5 +1,6 @@
 package com.wxkj.readerfm.base;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -91,9 +92,11 @@ public abstract class BaseListFragment<T> extends BaseFragment implements
                 super.onSuccess(headers, t);
 
                 try {
+                    String json = new String(t);
+                    Log.i("TAG","=============="+json);
 
-                    PageBean<T> resultBean = AppOperator.createGson().fromJson(new String(t) , getType());
-                    if (resultBean != null && !resultBean.isSuccess() && resultBean.getData() != null) {
+                    PageBean<T> resultBean = AppOperator.createGson().fromJson(json , getType());
+                    if (resultBean != null && resultBean.isSuccess() && resultBean.getData() != null) {
                         onRequestSuccess(resultBean.getCode());
                         setListData(resultBean);
                     } else {

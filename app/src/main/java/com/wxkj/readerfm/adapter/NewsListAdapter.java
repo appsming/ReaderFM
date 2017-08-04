@@ -19,6 +19,7 @@ public class NewsListAdapter  extends BaseListAdapter<NewsInfo>{
     @Override
     protected void convert(ViewHolder vh, NewsInfo item, int position) {
 
+
         vh.setText(R.id.tv_title, item.getTitle());
 
         vh.setText(R.id.tv_author, item.getTextAuthor());
