@@ -9,13 +9,12 @@
         android:id="@+id/tab_nav"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="@color/day_infoTextColor"
+        android:background="@color/white"
         app:tabGravity="fill"
         app:tabTextAppearance="@style/TabLayoutTextStyle"
         app:tabIndicatorColor="@color/actionbar_background"
         app:tabMode="fixed"
-
-        app:tabSelectedTextColor="@color/white"
+        app:tabSelectedTextColor="@color/red"
         app:tabTextColor="@color/black" />
 
     <android.support.v4.view.ViewPager

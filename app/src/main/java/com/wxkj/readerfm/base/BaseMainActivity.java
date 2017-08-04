@@ -33,7 +33,6 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
 
     private TextView mHeaderName;
 
-    private TextView mHeaderTime;
 
 
     @Bind(R.id.content)
@@ -67,7 +66,6 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
         View heanderView = navigationView.getHeaderView(0);
         mHeaderIcon = (ImageView) heanderView.findViewById(R.id.header_icon);
         mHeaderName = (TextView) heanderView.findViewById(R.id.header_name);
-        mHeaderTime = (TextView) heanderView.findViewById(R.id.header_time);
         heanderView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +77,7 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
     @Override
     public void initData() {
 
+        mHeaderName.setText(String.format(getString(R.string.user_nick_name),"小头儿"));
     }
 
 
