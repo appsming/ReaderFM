@@ -44,6 +44,7 @@ public abstract class BaseViewPagerFragment extends BaseFragment {
     public static class PagerInfo {
         private String title;
         private Class<?> clx;
+
         private Bundle args;
 
         public PagerInfo(String title, Class<?> clx, Bundle args) {

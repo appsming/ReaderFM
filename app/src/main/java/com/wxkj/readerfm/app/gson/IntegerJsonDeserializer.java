@@ -8,7 +8,8 @@ import com.wxkj.readerfm.utils.TLog;
 
 import java.lang.reflect.Type;
 
-
+/**
+ */
 public class IntegerJsonDeserializer implements JsonDeserializer<Integer> {
     @Override
     public Integer deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

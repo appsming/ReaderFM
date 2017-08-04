@@ -9,14 +9,15 @@ import com.wxkj.readerfm.fragment.NewsViewPagerFragment;
 
 public class MainActivity extends BaseMainActivity{
 
-    NewsViewPagerFragment  initFragment = null;
+    NewsViewPagerFragment newsViewPagerFragment = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initFragment  = new NewsViewPagerFragment();
+        newsViewPagerFragment  = new NewsViewPagerFragment();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.content,initFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content,  newsViewPagerFragment).commit();
+
     }
 
 

@@ -30,7 +30,7 @@ import butterknife.Bind;
  * Created by taosong on 17/8/2.
  */
 
-public  class BaseMainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
+public  class BaseMainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DoubleClickExitHelper mDoubleClickExit;
 
@@ -103,7 +103,8 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
     @Override
     public void initData() {
 
-        mHeaderName.setText(String.format(getString(R.string.user_nick_name),"小头儿"));
+        mHeaderName.setText(String.format(getString(R.string.user_nick_name), "小头儿"));
+
     }
 
 
@@ -180,35 +181,33 @@ public  class BaseMainActivity extends BaseActivity implements NavigationView.On
     }
 
 
-    
-    
-    
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_search, menu);
         return true;
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        
+
         switch (id){
-                
+
             case  R.id.main_actionbar_menu_search:
                 SearchActivity.show(BaseMainActivity.this);
                 break;
-           
+
         }
-        
-        
+
+
         return super.onOptionsItemSelected(item);
     }
 
-
 }
-

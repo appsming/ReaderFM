@@ -28,6 +28,9 @@ public class AppConfig {
     public static final int REQUEST_REGISTER_CODE = 0;
 
 
+    public static final String CATALOG_JSON_STR = "CATALOG_JSON_STR";
+
+
     // 默认存放文件下载的路径
     public final static String DEFAULT_SAVE_FILE_PATH = Environment
             .getExternalStorageDirectory()

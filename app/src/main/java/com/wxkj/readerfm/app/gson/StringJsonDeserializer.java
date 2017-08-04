@@ -8,7 +8,10 @@ import com.wxkj.readerfm.utils.TLog;
 
 import java.lang.reflect.Type;
 
-
+/**
+ * Created by qiujuer
+ * on 2016/11/22.
+ */
 public class StringJsonDeserializer implements JsonDeserializer<String> {
     @Override
     public String deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

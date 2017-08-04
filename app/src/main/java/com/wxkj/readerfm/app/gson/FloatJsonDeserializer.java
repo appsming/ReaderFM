@@ -8,7 +8,10 @@ import com.wxkj.readerfm.utils.TLog;
 
 import java.lang.reflect.Type;
 
+/**
 
+
+ */
 public class FloatJsonDeserializer implements JsonDeserializer<Float> {
     @Override
     public Float deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

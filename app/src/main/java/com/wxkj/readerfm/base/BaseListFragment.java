@@ -95,7 +95,7 @@ public abstract class BaseListFragment<T> extends BaseFragment implements
                     String json = new String(t);
                     Log.i("TAG","=============="+json);
 
-                    PageBean<T> resultBean = AppOperator.createGson().fromJson(json , getType());
+                    PageBean<T> resultBean = AppOperator.createGson().fromJson(json, getType());
                     if (resultBean != null && resultBean.isSuccess() && resultBean.getData() != null) {
                         onRequestSuccess(resultBean.getCode());
                         setListData(resultBean);

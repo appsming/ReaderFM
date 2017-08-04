@@ -13,7 +13,10 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
+/**
+ * Created by JuQiu
+ * on 16/6/24.
+ */
 public final class AppOperator {
     private static ExecutorService EXECUTORS_INSTANCE;
     private static Gson GSON_INSTANCE;

@@ -16,16 +16,14 @@ import com.wxkj.readerfm.ui.NewsDetailActivity;
 
 import java.lang.reflect.Type;
 
-import static com.wxkj.readerfm.fragment.NewsViewPagerFragment.CATALOG_YD;
-
 /**
  * Created by taosong on 17/8/2.
  */
 
-public class NewsFragment  extends BaseGeneralListFragment<NewsInfo> {
+public class NewsFragment  extends BaseGeneralListFragment<NewsInfo>  {
 
     public String requestCategory = "";//请求类型
-    public static final String CATEGORY_DEFAULE = CATALOG_YD;
+    public static final String CATEGORY_DEFAULE ="";
 
 
     @Override

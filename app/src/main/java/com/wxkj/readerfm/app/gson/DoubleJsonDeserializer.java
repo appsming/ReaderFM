@@ -8,6 +8,11 @@ import com.wxkj.readerfm.utils.TLog;
 
 import java.lang.reflect.Type;
 
+;
+
+/**
+
+ */
 public class DoubleJsonDeserializer implements JsonDeserializer<Double> {
     @Override
     public Double deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

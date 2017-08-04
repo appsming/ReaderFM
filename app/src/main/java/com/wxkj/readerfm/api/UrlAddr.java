@@ -20,5 +20,7 @@ public class UrlAddr {
 
     // 资讯搜索
     public static final String API_NEWS_SEARCH = "/api/news/search";
+
+    public  static final String API_NEWS_CATALOG = "/api/newsType/getAll";
 }
 

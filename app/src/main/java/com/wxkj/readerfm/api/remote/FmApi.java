@@ -66,6 +66,28 @@ public class FmApi {
 
 
     /**
+     * 请求新闻分类
+     * @param requestListener
+     */
+
+    public static void requestNewsCatalog(HttpCallback requestListener){
+
+
+
+        HttpParams   httpParams = new HttpParams();
+
+        String requestUrl = getBaseurl(UrlAddr.API_NEWS_CATALOG);
+
+        Log.i("TAG","=====requestUrl======="+requestUrl);
+
+        AsyncHttpHelp.post(requestUrl,httpParams,requestListener);
+
+    }
+
+
+
+
+    /**
      * 用户登录
      * @param username
      * @param password
